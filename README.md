@@ -8,6 +8,7 @@
 - Python 环境管理 [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
 - Python 交互式开发环境 [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/installation#install-with-conda)
+- [音频处理工具包 ffmpeg](https://phoenixnap.com/kb/install-ffmpeg-ubuntu)
 
 ### Jupyter Lab 后台启动配置
 
