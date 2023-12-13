@@ -162,3 +162,4 @@ cython_debug/
 # Customization
 
 nohup.out
+hf_transformers/models/
