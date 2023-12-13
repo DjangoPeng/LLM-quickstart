@@ -64,23 +64,23 @@ $ conda activate openai
 (openai) $ conda deactivate
 (base) $
 ```
-
+以下若无特殊说明，均在这里新建的openai环境中进行。
 
 ## Jupyter Lab
 Jupyter Lab 是一个交互式的开发环境，可以在浏览器中运行。它支持多种编程语言，包括 Python、R、Julia 等。 Jupyter Lab由conda-forge提供，请先配置镜像，然后使用以下命令安装：
 ```bash
-$ conda install jupyterlab
+(openai) $ conda install jupyterlab
 ```
 
 ## Hugging Face Transformers
 Hugging Face Transformers 是一个基于 PyTorch 和 TensorFlow 的自然语言处理工具包，提供了大量预训练模型，可以用来完成多种 NLP 任务。Hugging Face Transformers 可以通过 conda 安装：
 
 ```bash
-$ conda install -c huggingface transformers
+(openai) $ conda install -c huggingface transformers
 ```
 
 ## ffmpeg
 ffmpeg在anaconda中也有提供，使用anaconda管理ffmpeg和其他的二进制包，可以将环境隔离开来，系统环境对运行环境的影响。 ffmpeg在conda-forge中提供，需要先配置镜像，然后使用以下命令安装：
 ```bash
-$ conda install ffmpeg
+(openai) $ conda install ffmpeg
 ```
