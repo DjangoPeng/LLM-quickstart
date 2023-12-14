@@ -5,6 +5,7 @@
 
 ## 搭建开发环境
 
+- Python v3.10+
 - Python 环境管理 [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
 - Python 交互式开发环境 [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/installation#install-with-conda)
