@@ -1,4 +1,4 @@
-# 开发环境搭建
+# Transformers开发环境搭建
 ## 介绍
 开发环境搭建包含几个部分
 - Miniconda
@@ -60,7 +60,7 @@ $ conda install -n base -c conda-forge micromamba
 
 ### 创建虚拟环境
 ```bash
-# 创建名为 openai 的虚拟环境，指定 Python 版本为 3.11
+# 创建虚拟环境，指定 Python 版本为 3.11
 (base) $ conda create -n transformers python=3.11
 # 激活 openai 环境
 $ conda activate transformers
