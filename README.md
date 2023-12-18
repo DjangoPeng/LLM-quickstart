@@ -1,6 +1,11 @@
-# LLM-quickstart
-大语言模型快速入门（理论学习与微调实战）
+# 大模型微调训练 快速入门
 
+<p align="center">
+    <br> 中文 | <a href="README-en.md">English</a>
+</p>
+
+
+大语言模型快速入门（理论学习与微调实战）
 
 ## 搭建开发环境
 
@@ -17,7 +22,33 @@
 
 大多数新发布的大语言模型使用了较新的 PyTorch v2.0+ 版本，Pytorch 官方认为 CUDA 最低版本是 11.8 以及匹配的 GPU 驱动版本。详情见[Pytorch官方提供的 CUDA 最低版本要求回复](https://pytorch.org/get-started/pytorch-2.0/#faqs)。
 
-简而言之，建议直接安装当前最新的 CUDA 12.2 版本，[详情见 Nvidia 官方安装包](https://developer.nvidia.com/cuda-downloads)。
+简而言之，建议直接安装当前最新的 CUDA 12.3 版本，[详情见 Nvidia 官方安装包](https://developer.nvidia.com/cuda-downloads)。
+
+安装完成后，使用 `nvidia-smi` 指令查看版本：
+
+```shell
+nvidia-smi          
+Mon Dec 18 12:10:47 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla T4                       Off | 00000000:00:0D.0 Off |                    0 |
+| N/A   44C    P0              26W /  70W |      2MiB / 15360MiB |      6%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+```
 
 
 ### Jupyter Lab 后台启动配置

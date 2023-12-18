@@ -1,5 +1,11 @@
 # LLM Quick Start
+
+<p align="center">
+    <br> English | <a href="README.md">中文</a>
+</p>
+
 Quick Start for Large Language Models (Theoretical Learning and Practical Fine-tuning)
+
 
 ## Setting Up the Development Environment
 
@@ -14,6 +20,34 @@ Typically, GPU drivers and CUDA versions need to meet the requirements of the in
 Most recently released large language models use newer versions of PyTorch, such as PyTorch v2.0+. According to the PyTorch official documentation, the minimum required CUDA version is 11.8, along with a matching GPU driver version. You can find more details in the [PyTorch official CUDA version requirements](https://pytorch.org/get-started/pytorch-2.0/#faqs).
 
 In summary, it's advisable to install the latest CUDA version, which is currently CUDA 12.2. You can find the installation packages on the [Nvidia official website](https://developer.nvidia.com/cuda-downloads).
+
+
+After installation, use the nvidia-smi command to check the version:
+
+```shell
+nvidia-smi          
+Mon Dec 18 12:10:47 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla T4                       Off | 00000000:00:0D.0 Off |                    0 |
+| N/A   44C    P0              26W /  70W |      2MiB / 15360MiB |      6%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+```
+
 
 ### Configuring Jupyter Lab for Background Startup
 
