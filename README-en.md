@@ -9,9 +9,11 @@ Quick Start for Large Language Models (Theoretical Learning and Practical Fine-t
 
 ## Setting Up the Development Environment
 
+- Python v3.10+
 - Python Environment Management: [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/)
 - Interactive Python Development Environment: [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/installation#install-with-conda)
+- [Audio processing toolkit ffmpeg](https://phoenixnap.com/kb/install-ffmpeg-ubuntu)
 
 ### About GPU Drivers and CUDA Versions
 
@@ -19,10 +21,10 @@ Typically, GPU drivers and CUDA versions need to meet the requirements of the in
 
 Most recently released large language models use newer versions of PyTorch, such as PyTorch v2.0+. According to the PyTorch official documentation, the minimum required CUDA version is 11.8, along with a matching GPU driver version. You can find more details in the [PyTorch official CUDA version requirements](https://pytorch.org/get-started/pytorch-2.0/#faqs).
 
-In summary, it's advisable to install the latest CUDA version, which is currently CUDA 12.2. You can find the installation packages on the [Nvidia official website](https://developer.nvidia.com/cuda-downloads).
+In summary, it is recommended to directly install the latest CUDA 12.3 version. You can find the installation packages on the [Nvidia official website](https://developer.nvidia.com/cuda-downloads).
 
 
-After installation, use the nvidia-smi command to check the version:
+After installation, use the `nvidia-smi` command to check the version:
 
 ```shell
 nvidia-smi          
