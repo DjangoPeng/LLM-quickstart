@@ -1,0 +1,6 @@
+torch>=2.1.2
+transformers
+datasets
+evaluate
+scikit-learn
+pandas
