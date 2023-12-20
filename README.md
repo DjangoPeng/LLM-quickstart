@@ -10,6 +10,8 @@
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/installation#install-with-conda)
 - [音频处理工具包 ffmpeg](https://phoenixnap.com/kb/install-ffmpeg-ubuntu)
 
+详细开发环境说明请参考 [docs/INSTALL.md](docs/INSTALL.md)
+
 ### Jupyter Lab 后台启动配置
 
 上述开发环境安装完成后，建议使用后台常驻的方式来启动 Jupyter Lab。下面是相关配置（以 root 用户为例）：
