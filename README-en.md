@@ -15,6 +15,16 @@ Quick Start for Large Language Models (Theoretical Learning and Practical Fine-t
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers/installation#install-with-conda)
 - [Audio processing toolkit ffmpeg](https://phoenixnap.com/kb/install-ffmpeg-ubuntu)
 
+For detailed installation instructions, please refer to [Documentation](docs/INSTALL.md)
+
+### Installing Python Dependencies
+
+Please use the `requirements.txt` file to install Python dependencies:
+
+```shell
+pip install -r requirements.txt
+```
+
 ### About GPU Drivers and CUDA Versions
 
 Typically, GPU drivers and CUDA versions need to meet the requirements of the installed PyTorch and TensorFlow versions.

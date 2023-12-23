@@ -1,6 +1,10 @@
 torch>=2.1.2
 transformers
+ffmpeg
+ffmpeg-python
+timm
 datasets
 evaluate
 scikit-learn
 pandas
+peft
