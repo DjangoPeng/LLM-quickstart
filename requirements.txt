@@ -8,3 +8,8 @@ evaluate
 scikit-learn
 pandas
 peft
+accelerate
+autoawq
+optimum
+auto-gptq
+bitsandbytes>0.39.0
