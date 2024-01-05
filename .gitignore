@@ -165,3 +165,4 @@ nohup.out
 transformers/models/
 peft/models/
 peft/temp/
+hf_transformers/
