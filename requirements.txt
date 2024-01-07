@@ -16,3 +16,4 @@ bitsandbytes>0.39.0
 jiwer
 soundfile>=0.12.1
 librosa
+langchain
