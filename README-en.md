@@ -86,3 +86,21 @@ $ nohup jupyter lab --port=8000 --NotebookApp.token='replace_with_your_password'
 ```
 
 Jupyter Lab's output log will be saved in the `nohup.out` file (which is already filtered in the `.gitignore` file).
+
+### Configuration for calling OpenAI GPT API in LangChain
+
+In order to use the OpenAI API, you need to have an API key which can be obtained from the OpenAI dashboard. Once you have the key, you can set it as an environment variable:
+
+For Unix-based systems (like Ubuntu or MacOS), you can run the following command in your terminal:
+
+```bash
+export OPENAI_API_KEY='your-api-key'
+```
+
+For Windows, you can use the following command in the Command Prompt:
+
+```
+set OPENAI_API_KEY=your-api-key
+```
+
+Make sure to replace `'your-api-key'` with your actual OpenAI API key.

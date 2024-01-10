@@ -83,3 +83,21 @@ $ nohup jupyter lab --port=8000 --NotebookApp.token='替换为你的密码' --no
 ```
 
 Jupyter Lab 输出的日志将会保存在 `nohup.out` 文件（已在 .gitignore中过滤）。
+
+### 关于 LangChain 调用 OpenAI GPT API 的配置
+
+为了使用OpenAI API，你需要从OpenAI控制台获取一个API密钥。一旦你有了密钥，你可以将其设置为环境变量：
+
+对于基于Unix的系统（如Ubuntu或MacOS），你可以在终端中运行以下命令：
+
+```bash
+export OPENAI_API_KEY='你的-api-key'
+```
+
+对于Windows，你可以在命令提示符中使用以下命令：
+
+```bash
+set OPENAI_API_KEY=你的-api-key
+```
+
+请确保将`'你的-api-key'`替换为你的实际OpenAI API密钥。
