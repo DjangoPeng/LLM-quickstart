@@ -17,3 +17,4 @@ jiwer
 soundfile>=0.12.1
 librosa
 langchain
+gradio
