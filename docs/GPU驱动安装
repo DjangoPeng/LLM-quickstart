@@ -1,0 +1,85 @@
+申请华为云ECS服务器时，不应该同时选择安装GPU驱动，华为云镜像提供的驱动是cuda11.7,CUDNN-8.2.4,这个配置无法进行课程实验，必须自己安装T4卡驱动，cuda驱动，cuda toolkit（版本12.2），cudnn（这里安装8.9.7）
+  1.安装T4驱动
+在官方网站下载驱动，这里要注意选对芯片型号，T4还是V100要选对，cuda版本要和操作系统配套，如果要使用hagginface做模型推理，cuda版本要在12.2以上，否则推理会使用cpu而不是GPU，如果cuda要安装12.2版本，Ubuntu 操作系统要在20以上。
+
+lsmod | grep nouveau
+
+#检查服务器能否识别硬件
+lspci | grep -i nvidia
+
+#更新软件列表
+sudo apt-get update   
+
+sudo apt-get install g++
+
+sudo apt-get install gcc
+
+sudo apt-get install make
+
+--禁用系统自带的 nouveau 驱动
+vi /etc/modprobe.d/blacklist.conf 文件，阻止nouveau模块加载
+blacklist nouveau
+
+options nouveau modeset=0
+
+--更新initramfs
+sudo update-initramfs -u
+
+--重启系统
+lsmod | grep nouveau 没有输出就合适
+
+--安装驱动
+chmod +x NVIDIA-Linux-x86_64-535.154.05.run
+bash ./NVIDIA-Linux-x86_64-535.154.05.run
+
+--验证驱动
+输入nvidia-smi，如下图出现GPU的详细信息表明驱动安装成功
+
+
+2.安装cuda toolkit
+官网下载驱动，选择操作系统和版本，安装方式，按照下面提示安装
+
+--下载cuda存储库的配置信息
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+--设置CUDA存储库优先级
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+--下载installer
+wget https://developer.download.nvidia.com/compute/cuda/12.2.2/local_installers/cuda-repo-ubuntu2004-12-2-local_12.2.2-535.104.05-1_amd64.deb
+--通过dpkg工具安装CUDA的本地.deb文件
+sudo dpkg -i cuda-repo-ubuntu2004-12-2-local_12.2.2-535.104.05-1_amd64.deb
+--在第一次尝试这句命令时，可能会失败，运行系统会提供命令注册 GPG 密钥
+sudo cp /var/cuda-repo-ubuntu2004-12-2-local/cuda-*-keyring.gpg /usr/share/keyrings/
+--更新apt-get并安装
+sudo apt-get update
+sudo apt-get -y install cuda
+--安装完成后进行环境配置：
+--创建文件并编辑
+vi /etc/profile.d/cuda.sh
+export PATH=$PATH:/usr/local/cuda/bin
+export CUDADIR=/usr/local/cuda
+--创建文件添加以下行并保存
+vi /etc/ld.so.conf.d/cuda.conf
+/usr/local/cuda/lib64
+
+3.cuDnn安装
+从https://developer.nvidia.com/zh-cn/cudnn下载
+
+sudo dpkg -i cudnn-local-repo-ubuntu2004-8.9.7.29_1.0-1_amd64.deb
+sudo cp /var/cudnn-local-repo-ubuntu2004-8.9.7.29/cudnn-local-30472A84-keyring.gpg /usr/share/keyrings/
+cd /var/cudnn-local-repo-ubuntu2004-8.9.7.29/
+sudo dpkg -i libcudnn8_8.9.7.29-1+cuda12.2_amd64.deb
+sudo dpkg -i libcudnn8-dev_8.9.7.29-1+cuda12.2_amd64.deb
+sudo dpkg -i libcudnn8-samples_8.9.7.29-1+cuda12.2_amd64.deb
+
+ 验证安装
+cp -r /usr/src/cudnn_samples_v8/ $HOME
+cd  $HOME/cudnn_samples_v8/mnistCUDNN
+make clean && make
+./mnistCUDNN
+make遇错后处理
+
+sudo apt-get -y install  libfreeimage3 libfreeimage-dev
+重新make并roboot
+
+
+返回Test passed说明安装成功
