@@ -25,6 +25,34 @@
 pip install -r requirements.txt
 ```
 
+目前支持项目运行的软件版本列表如下所示，详见[版本对照文档](docs/version_info.txt)：
+
+```makefile
+torch>=2.1.2==2.3.0.dev20240116+cu121
+transformers==4.37.2
+ffmpeg==1.4
+ffmpeg-python==0.2.0
+timm==0.9.12
+datasets==2.16.1
+evaluate==0.4.1
+scikit-learn==1.3.2
+pandas==2.1.1
+peft==0.7.2.dev0
+accelerate==0.26.1
+autoawq==0.2.2
+optimum==1.17.0.dev0
+auto-gptq==0.6.0
+bitsandbytes>0.39.0==0.41.3.post2
+jiwer==3.0.3
+soundfile>=0.12.1==0.12.1
+librosa==0.10.1
+langchain==0.1.0
+gradio==4.13.0
+```
+
+为了检查你的运行环境中软件版本是否匹配，项目提供了自动化[版本检查脚本](docs/version_check.py)，请注意修改输出文件名。
+
+
 ### 关于 GPU 驱动和 CUDA 版本
 
 通常，GPU 驱动和 CUDA 版本都是需要满足安装的 PyTorch 和 TensorFlow 版本。
