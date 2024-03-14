@@ -112,6 +112,23 @@ $ nohup jupyter lab --port=8000 --NotebookApp.token='替换为你的密码' --no
 
 Jupyter Lab 输出的日志将会保存在 `nohup.out` 文件（已在 .gitignore中过滤）。
 
+访问 jupyter 
+```shell
+# 新打开一个终端
+cat nohup.out 
+```
+
+获取 Jupyter Lab 的访问链接
+```
+[I 2024-01-31 14:44:32.976 ServerApp] Serving notebooks from local directory: /root
+[I 2024-01-31 14:44:32.976 ServerApp] Jupyter Server 2.12.5 is running at:
+[I 2024-01-31 14:44:32.976 ServerApp] http://localhost:8000/lab?token=...
+[I 2024-01-31 14:44:32.976 ServerApp]     http://127.0.0.1:8000/lab?token=...
+[I 2024-01-31 14:44:32.976 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+```
+本机可以使用`http://127.0.0.1:8000/lab?token=替换为你的密码` , 服务器用户需要将`127.0.0.1` 替换为公网 ip
+注意: 如何使用了云服务器可以使用公网 ip 访问, 并在安全组中开启8000端口的访问权限
+
 ### 关于 LangChain 调用 OpenAI GPT API 的配置
 
 为了使用OpenAI API，你需要从OpenAI控制台获取一个API密钥。一旦你有了密钥，你可以将其设置为环境变量：
