@@ -42,7 +42,7 @@ sudo sh cuda_12.4.0_550.54.14_linux.run
 
 **注意使用`runfile`方式，可以连同版本匹配的 GPU 驱动一起安装好。
 
-![CUDA Toolkit](cuda_installation.png)
+![CUDA Toolkit](docs/cuda_installation.png)
 
 安装完成后，使用 `nvidia-smi` 指令查看版本：
 
