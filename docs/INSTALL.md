@@ -82,20 +82,9 @@ Hugging Face Transformers 是一个基于 PyTorch 和 TensorFlow 的自然语言
 
 安装文档：[Hugging Face Transformers](https://huggingface.co/docs/transformers/installation#install-with-conda)
 
-## 安装tensorflow
-Transformers需要使用tensorflow进行实际的模型推理，以下命令安装tensorflow的CPU和GPU版本：
-```bash
-(transformers) $ pip install tensorflow
-```
 
-若是使用Mac，对M1/M2芯片可以安装Metal插件，一些小一些的模型也可以尝试：
-```bash
-(transformers) $ pip install tensorflow-metal
-```
-安装文档：
-- [tensorflow](https://www.tensorflow.org/install)
-- [tensorflow-metal](https://developer.apple.com/metal/tensorflow-plugin/)
 ## 安装pytorch
+
 Transformers需要使用pytorch进行实际的模型推理，在前面已经配置了使用的pytorch和conda-forge镜像源，可以使用下命令安装和CUDA版本对应的Pytorch版本：
 ```bash
 # Linux
