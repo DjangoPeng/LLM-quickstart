@@ -1,5 +1,14 @@
 # LLM Quick Start
 
+![GitHub stars](https://img.shields.io/github/stars/DjangoPeng/LLM-quickstart?style=social)
+![GitHub forks](https://img.shields.io/github/forks/DjangoPeng/LLM-quickstart?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/DjangoPeng/LLM-quickstart?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/DjangoPeng/LLM-quickstart)
+![GitHub language count](https://img.shields.io/github/languages/count/DjangoPeng/LLM-quickstart)
+![GitHub top language](https://img.shields.io/github/languages/top/DjangoPeng/LLM-quickstart)
+![GitHub last commit](https://img.shields.io/github/last-commit/DjangoPeng/LLM-quickstart?color=red)
+![GitHub last commit](https://img.shields.io/github/last-commit/DjangoPeng/LLM-quickstart?color=red)
+
 <p align="center">
     <br> English | <a href="README.md">中文</a>
 </p>
