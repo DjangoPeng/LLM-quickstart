@@ -117,6 +117,11 @@ conda activate peft
 完整 Python 依赖软件包见[requirements.txt](requirements.txt)。
 
 ```shell
+# 仅仅windows需要
+pip install https://hf-mirror.com/madbuda/triton-windows-builds/resolve/main/triton-2.1.0-cp310-cp310-win_amd64.whl
+```
+
+```shell
 pip install -r requirements.txt
 ```
 
