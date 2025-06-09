@@ -42,7 +42,7 @@ git clone https://github.com/DjangoPeng/LLM-quickstart.git
 
 根据你的实际情况，找到对应的 [CUDA 12.04](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=runfile_local)：
 
-下载并安装 CUDA 12.04 Toolkit（包含GPU驱动）：
+下载并安装 CUDA 12.4 Toolkit（包含GPU驱动）：
 
 ```shell
 wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/cuda_12.4.0_550.54.14_linux.run
