@@ -59,7 +59,7 @@ sudo sh cuda_12.4.0_550.54.14_linux.run
 nvidia-smi          
 Mon Dec 18 12:10:47 2023       
 +---------------------------------------------------------------------------------------+
-| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.4     |
 |-----------------------------------------+----------------------+----------------------+
 | GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
