@@ -49,7 +49,7 @@ wget https://developer.download.nvidia.com/compute/cuda/12.4.0/local_installers/
 sudo sh cuda_12.4.0_550.54.14_linux.run
 ```
 
-**注意使用`runfile`方式，可以连同版本匹配的 GPU 驱动一起安装好。
+**注意使用`runfile`方式，可以连同版本匹配的 GPU 驱动一起安装好。**
 
 ![CUDA Toolkit](docs/cuda_installation.png)
 
